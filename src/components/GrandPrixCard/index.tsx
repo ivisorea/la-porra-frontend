@@ -13,7 +13,7 @@ export const GrandPrixCard: React.FC = () => {
                 </div>
                 <div className='name'>
                     <h3>Bahrain</h3>
-                    <h5>Formula 1 Grand Prix</h5>
+                    <h5>Formula 1 Grand Prix Place Bahrain</h5>
                 </div>
                 <div className='points'>
                     <h4>24</h4>
