@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import './fonts/F1-Display-Bold.ttf';
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>

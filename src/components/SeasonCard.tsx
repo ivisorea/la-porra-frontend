@@ -8,8 +8,7 @@ interface ContainerProps {
 const SeasonCard: React.FC<ContainerProps> = ({name}) => {
   return (
     <>
-        {/* <img className='user-image' src="https://honeywell-androidchallenge.com/content/images/user_profile.png" alt="" /> */}
-        <IonCard className='season-card'>
+        <IonCard className='season-card' routerLink='/season'>
           <IonCardHeader className='card-container'>
             <IonCardTitle className='card-title'>
               {name}

@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "F1-Display-Bold";
+    src: local("F1-Display-Bold"),
+     url("./fonts/F1-Display-Bold.ttf") format("truetype");
+    font-weight: bold;
+    }
+
