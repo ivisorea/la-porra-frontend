@@ -6,8 +6,8 @@ import SeasonCard from '../../components/SeasonCard';
 const Home: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader >
-        <IonToolbar color='#e10600'>
+      <IonHeader  >
+        <IonToolbar color='primary' >
           <IonTitle >Home</IonTitle>
         </IonToolbar>
       </IonHeader>
