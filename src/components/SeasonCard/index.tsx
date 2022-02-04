@@ -11,7 +11,7 @@ export const SeasonCard: React.FC<ContainerProps> = ({ year }) => {
         <IonCard className='season-card' routerLink={`/season/${year}`}>
           <IonCardHeader className='card-container'>
             <IonCardTitle className='card-title'>
-              Season {year}
+              <span>Season {year}</span>
             </IonCardTitle>
           </IonCardHeader>
         </IonCard>

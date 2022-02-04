@@ -15,8 +15,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 5rem auto;
-    padding: 2rem;
+    margin: 10% auto;
+    padding: .6rem;
     
     backdrop-filter: blur(5px);
 }
