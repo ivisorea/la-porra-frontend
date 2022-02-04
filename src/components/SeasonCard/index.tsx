@@ -1,17 +1,17 @@
 
 import { IonCard, IonCardHeader, IonCardTitle,  } from '@ionic/react';
-import './SeasonCard.css';
+import './styles.css';
 
 interface ContainerProps {
-  name: string;
+  year: string;
 }
-const SeasonCard: React.FC<ContainerProps> = ({name}) => {
+export const SeasonCard: React.FC<ContainerProps> = ({ year }) => {
   return (
     <>
-        <IonCard className='season-card' routerLink='/season'>
+        <IonCard className='season-card' routerLink={`/season/${year}`}>
           <IonCardHeader className='card-container'>
             <IonCardTitle className='card-title'>
-              {name}
+              Season {year}
             </IonCardTitle>
           </IonCardHeader>
         </IonCard>
@@ -19,5 +19,3 @@ const SeasonCard: React.FC<ContainerProps> = ({name}) => {
         
   );
 };
-
-export default SeasonCard;
