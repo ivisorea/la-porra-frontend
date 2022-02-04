@@ -1,0 +1,10 @@
+h3 {
+    font-family: F1-Display-Bold;
+}
+
+ul  {
+    list-style-type: none;
+    margin: .5rem;
+    padding: .5rem;
+    overflow: hidden;
+}

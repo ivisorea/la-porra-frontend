@@ -2,18 +2,21 @@ import { IonCard } from '@ionic/react';
 import React from 'react';
 import './styles.css';
 
-export const GrandPrixCard: React.FC = () => {
+interface ContainerProps {
+    grandPrix: any;
+}
+export const GrandPrixCard: React.FC<ContainerProps> = ({grandPrix}) => {
   return (
     <>
         <IonCard>
             <div className='card_container'>
                 <div className='date'>
-                    <h4>23-24</h4>
-                    <h4>Mar</h4>
+                    <span>{grandPrix.date}</span>
+                    <span>{grandPrix.time}</span>
                 </div>
                 <div className='name'>
-                    <h3>Bahrain</h3>
-                    <h5>Formula 1 Grand Prix Place Bahrain</h5>
+                    <span className='race_name'>{grandPrix.raceName}</span>
+                    <span className='circuit_name'>{grandPrix.Circuit.circuitName}</span>
                 </div>
                 <div className='points'>
                     <h4>24</h4>

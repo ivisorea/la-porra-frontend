@@ -8,12 +8,9 @@ import {
   IonTabs,
   setupIonicReact
 } from '@ionic/react';
-// import { useState } from 'react';
-// import xml2js from 'xml2js';
 import { IonReactRouter } from '@ionic/react-router';
 import { home, person } from 'ionicons/icons';
 import Home from './pages/HomeTab/HomeTab';
-import Tab3 from './pages/Tab3';
 import './App.css'
 
 /* Core CSS required for Ionic components to work properly */
@@ -34,30 +31,16 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import SeasonPage from './pages/SeasonPage/SeasonPage';
-// import axios from 'axios';
-import { useEffect } from 'react';
 import { UserTab } from './pages/UserTab';
+import { SeasonPage } from './pages/SeasonPage';
 
 setupIonicReact();
 
-const App: React.FC = () => {
-  // const [season, setSeason] = useState("");
 
-  useEffect(() => {
-    // const parser = new xml2js.Parser();
-    // const getData = async () => {
-    //   const results = await axios.get('http://ergast.com/api/f1/2021', {
-    //     "Content-Type": "application/xml; charset=utf-8"
-    //   });
-    //   parser.parseString(results.data, (err, result) => {
-    //     setSeason(result);
-    //     console.log(result);
-    //   }
-    //   );
-    // };
-    // getData();
-  }, []);
+
+const App: React.FC = () => {
+
+  
 
 
   return(
@@ -68,15 +51,13 @@ const App: React.FC = () => {
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route exact path="/season">
-            <SeasonPage/>
+          <Route path="/season/:year">
+            <SeasonPage />
           </Route>
           <Route exact path="/user">
             <UserTab/>
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
+          
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
