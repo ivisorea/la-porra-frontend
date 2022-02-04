@@ -11,8 +11,6 @@ export const UserTab: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen >
         <div className='container'>
-
-        
           <form className='user_container'>   
             <IonItem className='input'>
               <IonLabel position="floating"  className='label'>User</IonLabel>

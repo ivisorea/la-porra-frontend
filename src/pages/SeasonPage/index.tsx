@@ -21,13 +21,14 @@ export const SeasonPage: React.FC<ContainerProps> = () => {
       const getschedule = async () => {
         const response = await axios.get(`https://ergast.com/api/f1/${year}.json`);
         setGrandPrix(response.data.MRData.RaceTable.Races);
-        console.log(grandPrix);
+        console.log(grandPrix)
       }
       getschedule();
     } catch (error) {
       console.log(error);
     }
-  }, [year]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
   return (
     <IonPage>
@@ -40,8 +41,8 @@ export const SeasonPage: React.FC<ContainerProps> = () => {
 
         <ul>
           {
-            grandPrix.map((grandPrix: any) => {
-              return <GrandPrixCard key={grandPrix.name} grandPrix={grandPrix} />
+            grandPrix.map((grandPrix: any, index) => {
+              return <GrandPrixCard key={index} grandPrix={grandPrix} />
             })
           }
         </ul>
