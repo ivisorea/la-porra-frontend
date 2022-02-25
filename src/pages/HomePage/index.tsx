@@ -3,7 +3,7 @@ import { SeasonCard } from '../../components/SeasonCard';
 
 
 
-const Home: React.FC = () => {
+export const HomePage: React.FC = () => {
   return (
     <IonPage>
       <IonHeader  >
@@ -19,4 +19,3 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;

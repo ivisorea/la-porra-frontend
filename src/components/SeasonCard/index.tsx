@@ -2,10 +2,11 @@
 import { IonCard, IonCardHeader, IonCardTitle,  } from '@ionic/react';
 import './styles.css';
 
-interface ContainerProps {
+export type SeasonCardProps = {
   year: string;
 }
-export const SeasonCard: React.FC<ContainerProps> = ({ year }) => {
+
+export const SeasonCard: React.FC<SeasonCardProps> = ({ year }) => {
   return (
     <>
         <IonCard className='season-card' routerLink={`/season/${year}`}>

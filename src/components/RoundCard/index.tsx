@@ -1,14 +1,17 @@
 import { IonCard } from '@ionic/react';
 import React from 'react';
 import './styles.css';
+import { Race } from '../../model/model';
 
-interface ContainerProps {
-    grandPrix: any;
+
+export type RoundCardProps = {
+    grandPrix: Race;
 }
-export const GrandPrixCard: React.FC<ContainerProps> = ({grandPrix}) => {
+
+export const RoundCard: React.FC<RoundCardProps> = ({grandPrix}) => {
   return (
     <>
-        <IonCard>
+        <IonCard routerLink={`/${grandPrix.season}/${grandPrix.round}/race-results`}>
             <div className='card_container'>
                 <div className='date'>
                     <span>{grandPrix.date}</span>
