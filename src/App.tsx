@@ -41,9 +41,6 @@ setupIonicReact();
 
 const App: React.FC = () => {
 
-  
-
-
   return(
   <IonApp>
     <IonReactRouter>

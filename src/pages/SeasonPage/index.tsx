@@ -24,7 +24,7 @@ export const SeasonPage: React.FC = () => {
       console.log(error);
     }
   
-  },[]);
+  },[year]);
 
   return (
     <IonPage>

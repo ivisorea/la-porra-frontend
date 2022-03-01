@@ -2,6 +2,7 @@ export interface QualifyingResult {
     position: string;
     Driver: {
         code: string;
+        familyName: string;
     }
     Q1: string;
     Q2: string;
@@ -25,5 +26,16 @@ export interface Race {
     date: string;
     time: string;
     Results?: RaceResult;
-    QualifyingResults?: QualifyingResult;
+    QualifyingResults?: [
+        {
+            position: string;
+        Driver: {
+            code: string;
+            familyName: string;
+        }
+        Q1: string;
+        Q2: string;
+        Q3: string;
+        }
+    ]
 }

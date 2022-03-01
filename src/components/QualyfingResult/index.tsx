@@ -1,15 +1,15 @@
 import React from 'react';
-import { Race } from '../../model/model';
+import { QualifyingResult } from '../../model/model';
 
 export type QualyfingResultProps = {
-    raceresult: Race;
+    qualifyResult: QualifyingResult;
+    
 }
 
-export const QualyfingResult: React.FC<QualyfingResultProps> = ({raceresult}) => {
+export const QualyfingResult: React.FC<QualyfingResultProps> = ({qualifyResult}) => {
     return (
         <>
-            <h1>QualyfingResult</h1>
-            {raceresult.raceName}
+        
         </>
     );
 };
