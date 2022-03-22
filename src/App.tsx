@@ -10,7 +10,6 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { home, person } from 'ionicons/icons';
-import Home from './pages/HomeTab/HomeTab';
 import './App.css'
 
 /* Core CSS required for Ionic components to work properly */
@@ -33,6 +32,8 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import { UserTab } from './pages/UserTab';
 import { SeasonPage } from './pages/SeasonPage';
+import { RaceResults } from './pages/RaceResults';
+import { HomePage } from './pages/HomePage';
 
 setupIonicReact();
 
@@ -40,27 +41,27 @@ setupIonicReact();
 
 const App: React.FC = () => {
 
-  
-
-
   return(
   <IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/home">
-            <Home />
+            <HomePage/>
           </Route>
-          <Route path="/season/:year">
+          <Route exact path="/season/:year">
             <SeasonPage />
           </Route>
           <Route exact path="/user">
             <UserTab/>
           </Route>
-          
+          <Route path="/:year/:round/race-results">
+            <RaceResults/>
+          </Route>
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
+          
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="home" href="/home">

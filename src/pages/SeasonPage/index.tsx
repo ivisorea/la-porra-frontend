@@ -1,34 +1,30 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { GrandPrixCard } from '../../components/GrandPrixCard';
+import { RoundCard } from '../../components/RoundCard';
 import { useParams } from 'react-router';
 import './styles.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Race } from '../../model/model';
 
-interface ContainerProps {
- 
-}
-export const SeasonPage: React.FC<ContainerProps> = () => {
-  const  {year}  = useParams<{ year: string }>()
 
-  const [grandPrix, setGrandPrix] = useState<any[]>([]);
+export const SeasonPage: React.FC = () => {
+  const { year }  = useParams<{ year: string }>()
 
- 
+  const [grandsPrix, setGrandsPrix] = useState<Race[]>([]);
 
   useEffect(() => {
-    
     try {
-      const getschedule = async () => {
+      const getSchedule = async () => {
         const response = await axios.get(`https://ergast.com/api/f1/${year}.json`);
-        setGrandPrix(response.data.MRData.RaceTable.Races);
-        console.log(grandPrix)
+        setGrandsPrix(response.data.MRData.RaceTable.Races);
       }
-      getschedule();
+      getSchedule();
     } catch (error) {
       console.log(error);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[]);
+  
+  },[year]);
 
   return (
     <IonPage>
@@ -38,11 +34,10 @@ export const SeasonPage: React.FC<ContainerProps> = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-
         <ul>
           {
-            grandPrix.map((grandPrix: any, index) => {
-              return <GrandPrixCard key={index} grandPrix={grandPrix} />
+            grandsPrix.map((grandPrix: Race, index) => {
+              return <RoundCard key={index} grandPrix={grandPrix} />
             })
           }
         </ul>
