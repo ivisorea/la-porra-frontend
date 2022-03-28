@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { RoundCard } from '../../Components/RoundCard';
+import { RoundCard } from '../../components/RoundCard';
 import { useParams } from 'react-router';
 import './styles.css';
 import { useEffect, useState } from 'react';

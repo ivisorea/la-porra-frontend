@@ -1,5 +1,5 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { SeasonCard } from '../../Components/SeasonCard';
+import { SeasonCard } from '../../components/SeasonCard';
 
 
 

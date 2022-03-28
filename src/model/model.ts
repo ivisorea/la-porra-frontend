@@ -53,3 +53,7 @@ export interface RoundResult {
         position: string;
     }
 }
+
+export interface Children {
+    children: JSX.Element | JSX.Element[];
+}
