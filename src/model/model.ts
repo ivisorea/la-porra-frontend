@@ -10,10 +10,10 @@ export interface QualifyingResult {
 };
 
 export interface RaceResult {
-    position: string;
-    Driver: {
-        code: string;
-    }
+        Driver: {
+            code: string;
+        }
+        position: string;
 };
 
 export interface Race {
@@ -38,4 +38,22 @@ export interface Race {
         Q3: string;
         }
     ]
+}
+
+export interface RoundResult {
+    raceName: string;
+    url: string;
+    Circuit?: {
+        circuitName: string;
+    };
+    Results:{
+        Driver: {
+            code: string;
+        }
+        position: string;
+    }
+}
+
+export interface Children {
+    children: JSX.Element | JSX.Element[];
 }

@@ -1,0 +1,44 @@
+.driver-list-container{
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+    
+}
+.driver-list-container ul{
+    margin: 0;
+    padding: 0;
+}
+.driver-list-container ul li{
+    float: left;
+    list-style: none;
+    width:25%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.driver-list--close{
+    position: absolute;
+    right: .2rem;
+    top: .2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.driver-list--close--button{
+    color: #020202;
+    background: transparent;
+}
+
+
+
+/* Responsive media queries */
+@media screen and (min-width: 768px){
+    .driver-list{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .driver-list-container ul li{
+        width:20%;
+    }
+    
+}
