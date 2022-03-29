@@ -16,28 +16,28 @@ export const QualyfingResults: React.FC<QualyfingResultsProps> = ({raceresult}) 
                 <div className='race-position'>
                     <p>Q3</p>
                     {circuitQualifyingResults?.slice(0, 10).map((qualifyResult: QualifyingResult, index: number) => {
-                        return <Qualyfing index={index} qualifyResult={qualifyResult.Q3}/>
+                        return <Qualyfing key={index} qualifyResult={qualifyResult.Q3}/>
                     })}
                 </div>
                 
                 <div className='race-position'>
                     <p>Q2</p>
                     {circuitQualifyingResults?.slice(0, 10).map((qualifyResult: QualifyingResult, index: number) => {
-                        return <Qualyfing index={index} qualifyResult={qualifyResult.Q2}/>
+                        return <Qualyfing key={index} qualifyResult={qualifyResult.Q2}/>
                     })}
                 </div>
 
                 <div className='race-position'>
                     <p>Q1</p>
                     {circuitQualifyingResults?.slice(0, 10).map((qualifyResult: QualifyingResult, index: number) => {
-                        return <Qualyfing index={index} qualifyResult={qualifyResult.Q1}/>
+                        return <Qualyfing key={index} qualifyResult={qualifyResult.Q1}/>
                     })}
                 </div>
 
                 <div className='race-position'>
                     <p>POS</p>
                     {circuitQualifyingResults?.slice(0, 10).map((qualifyResult: QualifyingResult, index: number) => {
-                        return <Qualyfing index={index} qualifyResult={qualifyResult.Driver.code}/>
+                        return <Qualyfing key={index} qualifyResult={qualifyResult.Driver.code}/>
                     })}
                 </div>
             </div>

@@ -9,9 +9,6 @@ import { PredictionForm } from '../../components/PredictionForm';
 import { AppContext } from '../../context/AppContext';
 import { Modal } from '../../components/Modal/Modal';
 import { DriverList } from '../../components/DriverList';
-import { Driver } from '../../components/Driver';
-
-
 
 export const RaceResults: React.FC = () => {
     const { year, round } = useParams<{ round: string, year: string }>();
@@ -62,26 +59,27 @@ console.log('roundResults', roundResults)
             <IonContent fullscreen>
                 <ul>
                   {
-                    races.map((race: Race, index) => {
+                    races.map((race: Race, index: number) => {
                       return <CircuitResult key={index} raceresult={race}/>
                     })
                   }
                 </ul>
+                <PredictionForm/>
                 
-                <h3>Final Position</h3>
                 {
                   roundResults.map((roundResult: RoundResult, index) => {
-                    return <FinalPosition index={index} roundResult={roundResult}/>
+                    return <FinalPosition key={index} roundResult={roundResult}/>
                   })
                 }
-                <PredictionForm/>
+                
+                
+                
                 {
                   openModal && 
                     <Modal>
                       <DriverList/>
                     </Modal>
                 }
-              
                 
             </IonContent>
         </IonPage>

@@ -1,7 +1,7 @@
 .driver-list-container{
     display: flex;
     overflow: hidden;
-    margin: auto;
+    margin: 10px;
     
 }
 .driver-list-container ul{
@@ -18,14 +18,17 @@
 
 .driver-list--close{
     position: absolute;
-    right: .2rem;
-    top: .2rem;
+    right: .3rem;
+    top: .3rem;
     font-size: 1rem;
     cursor: pointer;
 }
 .driver-list--close--button{
     color: #020202;
     background: transparent;
+}
+.driver-list--close--button:hover{
+    color: #e10700c8;
 }
 
 
