@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../../context/AppContext';
 import { Driver } from '../Driver';
-import { PredictionForm } from '../PredictionForm';
 import './DriverList.css'
 export type DriverListProps = {
 
