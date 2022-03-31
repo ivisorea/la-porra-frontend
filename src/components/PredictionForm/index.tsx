@@ -20,8 +20,8 @@ export const PredictionForm: React.FC<PredictionFormProps> = () => {
     <>
       <p className='form-title'>Enter your prediction:</p>
       <form className='prediction-form-container'>
-        <div className='driver driver-position'>
-          <button
+        <div className=' driver-card'>
+          <button 
             type='button'
             onClick={(handleOpenModal)}
           > Add position</button>
@@ -29,7 +29,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = () => {
           Position 1
         </label>
         </div>
-        <div className='driver driver-position'>
+        <div className=' driver-card'>
           <button
             type='button'
             onClick={(handleOpenModal)}
@@ -38,7 +38,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = () => {
           Position 2
         </label>
         </div>
-        <div className='driver driver-position'>
+        <div className=' driver-card'>
           <button
             type='button'
             onClick={(handleOpenModal)}
@@ -47,7 +47,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = () => {
           Position 3
         </label>
         </div>
-        <div className='driver driver-position'>
+        <div className=' driver-card'>
           <button
             type='button'
             onClick={(handleOpenModal)}
@@ -56,7 +56,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = () => {
           Position 4
         </label>
         </div>
-        <div className='driver driver-position'>
+        <div className=' driver-card'>
           <button
             type='button'
             onClick={(handleOpenModal)}
@@ -65,7 +65,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = () => {
           Position 5
         </label>
         </div>
-        <div className='driver driver-position'>
+        <div className=' driver-card'>
           <button
             type='button'
             onClick={(handleOpenModal)}
@@ -74,7 +74,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = () => {
           Position 6
         </label>
         </div>
-        <div className='driver driver-position'>
+        <div className=' driver-card'>
           <button
             type='button'
             onClick={(handleOpenModal)}
@@ -83,7 +83,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = () => {
           Position 7
         </label>
         </div>
-        <div className='driver driver-position'>
+        <div className=' driver-card'>
           <button
             type='button'
             onClick={(handleOpenModal)}
@@ -92,7 +92,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = () => {
           Position 8
         </label>
         </div>
-        <div className='driver driver-position'>
+        <div className=' driver-card'>
           <button
             type='button'
             onClick={(handleOpenModal)}
@@ -101,7 +101,7 @@ export const PredictionForm: React.FC<PredictionFormProps> = () => {
           Position 9
         </label>
         </div>
-        <div className='driver driver-position'>
+        <div className='driver-card'>
           <button
             type='button'
             onClick={(handleOpenModal)}

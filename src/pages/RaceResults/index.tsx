@@ -9,6 +9,7 @@ import { PredictionForm } from '../../components/PredictionForm';
 import { AppContext } from '../../context/AppContext';
 import { Modal } from '../../components/Modal/Modal';
 import { DriverList } from '../../components/DriverList';
+import { Driver } from '../../components/Driver';
 
 export const RaceResults: React.FC = () => {
     const { year, round } = useParams<{ round: string, year: string }>();
@@ -71,16 +72,12 @@ console.log('roundResults', roundResults)
                     return <FinalPosition key={index} roundResult={roundResult}/>
                   })
                 }
-                
-                
-                
                 {
                   openModal && 
                     <Modal>
                       <DriverList/>
                     </Modal>
                 }
-                
             </IonContent>
         </IonPage>
     </>
