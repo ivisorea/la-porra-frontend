@@ -57,3 +57,9 @@ export interface RoundResult {
 export interface Children {
     children: JSX.Element | JSX.Element[];
 }
+
+export interface DriverInfo {
+    code: string;
+    name: string;
+    image: string;
+}

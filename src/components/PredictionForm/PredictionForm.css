@@ -18,21 +18,31 @@
 .prediction-form-position-input{
     width: 10rem;
 }
-.driver-position{
-    margin: 2px;
+.driver-card{
+    margin: 5px;
     flex: 1 0 0%;
+    position: relative;
+    border: solid 1px rgb(107, 106, 106);
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
 }
-.driver-position button{
+.driver-card button{
     font-size: .6rem;
     background: #e4e4e7f5;
     padding: 0 0 5px 0;
-    margin: 0;
+    margin: 2px;
 }
 .driver-label label{
     background: white;
 }
-/* span{
-    font-size: .8rem;
-    color: #e10700c8;
-    text-shadow: #aaa9a9 1px 1px 1px;
-} */
+.driver-label{
+    color: rgb(54, 53, 53);
+    position: absolute;
+    left: .01rem;
+    background: white;
+    top: -.3rem;
+    padding: 0 .1rem;
+    background: #e4e4e7f5;
+    font-size: .5rem;
+}
